@@ -27,8 +27,3 @@ For Lab 1, product data is stored temporarily in an in-memory Java `List`. No da
 |-----------|---------|
 | Service Name | catalog-service |
 | Port | 8081 |
-
-Application configuration:
-
-spring.application.name=catalog-service
-server.port=8081

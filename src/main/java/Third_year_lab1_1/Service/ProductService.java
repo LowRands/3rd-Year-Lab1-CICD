@@ -1,22 +1,24 @@
 package Third_year_lab1_1.Service;
 
 import Third_year_lab1_1.Model.Product;
+import Third_year_lab1_1.Repo.ProductRepo;
 import org.springframework.stereotype.Service;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class ProductService {
-    private final List<Product> products = new ArrayList<>();
-    private long nextId = 1;
+
+    private final ProductRepo productRepo;
+    public ProductService(ProductRepo productRepo) {
+        this.productRepo = productRepo;
+    }
 
     public List<Product> getAll() {
-        return products;
+        return productRepo.findAll();
     }
 
     public Product create(Product product) {
-        product.setId(nextId++);
-        products.add(product);
-        return product;
+        product.setId(null);
+        return productRepo.save(product);
     }
 }

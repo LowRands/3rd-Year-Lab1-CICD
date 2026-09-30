@@ -24,6 +24,7 @@ public class ProductService {
         product.setId(null);
         return productRepo.save(product);
     }
+
     public Product getById(Long id) {
         return productRepo.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(

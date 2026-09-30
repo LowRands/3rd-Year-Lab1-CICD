@@ -15,13 +15,20 @@ public class ProductController {
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
+
     @GetMapping
     public List<Product> getProducts() {
         return productService.getAll();
     }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Product create(@RequestBody Product product) {
         return productService.create(product);
+    }
+
+    @GetMapping("/{id}")
+    public Product getProduct(@PathVariable long id) {
+        return productService.getById(id);
     }
 }

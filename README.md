@@ -27,3 +27,5 @@ For Lab 1, product data is stored temporarily in an in-memory Java `List`. No da
 |-----------|---------|
 | Service Name | catalog-service |
 | Port | 8081 |
+
+Lab 4 - Branch Lab4 SQL - https://dbfiddle.uk/011xogT_?hide=33554428
